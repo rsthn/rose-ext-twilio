@@ -1,0 +1,26 @@
+{
+    "name": "rsthn/rose-ext-twilio",
+    "description": "Twilio Adapter for Rose",
+    "version": "1.0.0",
+    "type": "rose-extension",
+    "license": "Apache-2.0",
+    "authors": [
+        {
+            "name": "Jonathan Palencia",
+            "email": "strikeone88@rsthn.com"
+        }
+    ],
+    "extra": {
+        "rose-ext-identifier": "Twilio"
+    },
+    "minimum-stability": "stable",
+    "require": {
+        "rsthn/rose-extension-installer": "*",
+        "twilio/sdk": "^6.24"
+    },
+    "autoload": {
+        "psr-4": {
+            "Rose\\Ext\\Twilio\\": "."
+        }
+    }
+}
