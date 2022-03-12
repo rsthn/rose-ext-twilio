@@ -47,5 +47,5 @@ Returns: `boolean`
 Example:
 
 ```clojure
-(twilio::set (& "sid" "SID_VALUE"))
+(twilio::config (& "sid" "SID_VALUE"))
 ```

@@ -83,16 +83,14 @@ class TwilioHelper
 
 			return new Map([
 				'sid' => $message->sid,
-				'error' => $message->errorMessage,
-				'errorCode' => $message->errorCode,
-				'price' => $message->price
+				'price' => $message->price,
+				'error' => null
 			]);
 		}
 		catch (\Exception $e)
 		{
 			return new Map([
-				'error' => $e->getMessage(),
-				'errorCode' => 409
+				'error' => $e->getMessage()
 			]);
 		}
 	}
@@ -119,7 +117,7 @@ class TwilioHelper
  * @param toNumber: string
  * @param message: string
  * @param fromNumber?: string
- * @return Map { sid:string, error:string, errorCode:number, price:number }
+ * @return Map { sid:string, price:number, error:string } | { error:string }
  */
 Expr::register('twilio::send', function($args, $parts, $data)
 {
