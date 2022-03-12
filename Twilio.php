@@ -46,7 +46,10 @@ class TwilioHelper
 	static function ensureConfigReady ($reset=false)
 	{
 		if (self::$config_loaded === null)
+		{
 			self::$config_loaded = Configuration::getInstance()->Twilio;
+			if (!self::$config_loaded) self::$config_loaded = new Map();
+		}
 
 		if (self::$config === null)
 		{
